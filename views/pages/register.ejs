@@ -1,0 +1,70 @@
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/style.css" />
+<div class="register-page" id="register-page">
+    <div class="register-container">
+        <div class="header-section">
+            <div class="main-head">Sign up now</div>
+        </div>
+        <div class="form-section">
+            <div class="form-row">
+                <div class="form-input">
+                    <input type="text" placeholder="First Name" name="First Name" validationType="required"
+                        id="firstName" required>
+                    <div class="error-msg hide"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-input">
+                    <input type="text" placeholder="Last Name" name="Last Name" validationType="required" id="lastName"
+                        required>
+                    <div class="error-msg hide"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-input">
+                    <input type="email" placeholder="Email" name="Email" validationType="email" id="email" required>
+                    <div class="error-msg hide"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-input">
+                    <input type="number" placeholder="Phone Number" name="Phone Number" validationType="required"
+                        maxlength="10" id="phoneNumber"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        required>
+                    <div class="error-msg hide"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-input">
+                    <textarea name="" rows="2" placeholder="Address" name="Address" id="address"
+                        validationType="required" required></textarea>
+                    <div class="error-msg hide"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-input">
+                    <input type="password" placeholder="Password" name="Password" validationType="required"
+                        id="password" required>
+                    <div class="error-msg hide"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-input">
+                    <input type="password" placeholder="Confirm Password" name="Confirm Password"
+                        validationType="required" id="confirmPassword" required>
+                    <div class="error-msg hide"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <button class="button-primary" id="registerButton">SIGN UP</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../public/external/axios.min.js"></script>
+<script type="text/javascript" src="/public/javascripts/pages/register.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        registerPage.initialize();
+    });
+</script>

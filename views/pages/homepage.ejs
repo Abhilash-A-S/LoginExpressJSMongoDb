@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/home.css" />
+<div class="homePage">
+    <nav class="side-nav">
+        <%- include('components/sidepanel.ejs') %>
+    </nav>
+    <div class="col-1">
+
+        <head class="header">
+            <%- include('components/header.ejs') %>
+        </head>
+        <main class="main-content">
+            <div class="login-msg-info">
+                <div>
+                    Thank you for login to our application. Site is under maintenance <br>
+                    <p>Site will launched soon...</p>
+                    <div class="logout">
+                        <button class="logout-button" id="logOutButton">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script type="text/javascript" src="../../public/external/axios.min.js"></script>
+<script src="../../public/javascripts/pages/homepage.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        homePage.initialize();
+    });
+</script>

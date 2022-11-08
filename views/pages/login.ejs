@@ -1,0 +1,43 @@
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/style.css" />
+<div class="loader-section hide" id="loader">
+    <%- include('components/loader.ejs') %>
+</div>
+<div class="notification hide" id="notificationSection">
+    <span id="message"></span>
+    <span class="closebtn" id="closebtn">&times;</span>
+</div>
+<div id="login-page" class="login-page">
+    <div class="login-container">
+        <div class="header-section">
+            <div class="main-head">Login to our site</div>
+        </div>
+        <div class="form-section">
+            <div class="form-row">
+                <div class="form-input">
+                    <input type="email" placeholder="Enter Email" name="Email" validationType="email" id="email">
+                    <div class="error-msg hide"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-input">
+                    <input type="password" placeholder="Enter Password" name="Password" validationType="required"
+                        id="password">
+                    <div class="error-msg hide"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <button class="button-primary" id="loginButton">SIGN IN</button>
+                <div class="align-center align-or">OR</div>
+                <button class="button-primary" href="/register" id="registerButton">SIGN
+                    UP</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../public/external/axios.min.js"></script>
+<script type="text/javascript" src="/public/javascripts/pages/login.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        loginPage.initialize();
+    });
+</script>
